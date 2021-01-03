@@ -26,14 +26,14 @@ Load balancing ensures that the application will be highly **functional and redu
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the **log files** and system **metrics**.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| **Name** | **Function** | **IP Address**               | **Operating System** |
+|----------|--------------|------------------------------|----------------------|
+| Jbox     | Gateway      | 10.0.0.4(Private)//Public IP | Linux                |
+| ELK      | Server       | 10.1.0.4(Private)//Public IP | Linux                |
+| WEB-1    | Web Server   | 10.0.0.5(Private)            | Linux                |
+| WEB-2    | Web Server   | 10.0.0.6(Private)            | Linux                |
+| WEB-3    | Web Server   | 10.0.0.7(Private)            | Linux                |
 
 ### Access Policies
 
