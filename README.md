@@ -88,8 +88,11 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the [Filebeat Playbook](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Ansible/filebeat-playbook.yml) file to '/etc/ansible'.
-- Update the _____ file to include...
+- Copy the [Filebeat Playbook](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Ansible/filebeat-playbook.yml) file to `/etc/ansible`.
+- Update the `/etc/ansible/hosts` file to include 
+`[elk]
+ 10.1.0.4 ansible_python_interpreter=/usr/bin/python3`
+ 
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
