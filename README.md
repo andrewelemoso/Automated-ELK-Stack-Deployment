@@ -63,8 +63,8 @@ The playbook implements the following tasks:
 - Download and Install Docker
 - Download and Install Python3-pip
 - Download and Install Docker
-- Use sysctl module
-- Download and launch a docker elk container at Start Up
+- Use Sysctl Module
+- Download and launch a docker ELK container at Start Up
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -72,19 +72,23 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- WEB-1 (10.0.0.5)
+- WEB-2 (10.0.0.6)  
+- WEB-3 (10.0.0.7)         
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Filebeat Module
+- Metricbeat Module
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat is used to collect log files from specific files on remote machines.
+- Examples of Metricbeat can be CPU usage/Uptime.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
+- Copy the [Filebeat Playbook](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Ansible/filebeat-playbook.yml) file to '/etc/ansible'.
 - Update the _____ file to include...
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
