@@ -23,7 +23,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly **functional and redundant**, in addition to restricting **all access expect authorized administrative access** to the network.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the **log files** and system **metrics**.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the **log files** and system **metrics.**
 
 The configuration details of each machine may be found below.
 
@@ -39,10 +39,10 @@ The configuration details of each machine may be found below.
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the **Jbox (Jump Box) ** machine can accept connections from the Internet. Access to this machine is only allowed from the **Administrator's Public IP and all others the admin may add if needed**.
+Only the **Jbox (Jump Box) ** machine can accept connections from the Internet. Access to this machine is only allowed from the **Administrator's Public IP and all others the admin may add if needed.**
 
 
-Machines within the network can only be accessed by **Jbox (10.0.0.4)**.
+Machines within the network can only be accessed by **Jbox (10.0.0.4).**
 
 A summary of the access policies in place can be found in the table below.
 
@@ -56,17 +56,19 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because **of the ability to use YAML playbooks which is the best alternative for configuration management/automation, It is also able to automate complex multi-tier IT application environemtns.**
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+[ELK Install Playbook](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Ansible/install-elk.yml)
+- Download and Install Docker
+- Download and Install Python3-pip
+- Download and Install Docker
+- Use sysctl module
+- Download and launch a docker elk container at Start Up
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![docker ps](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Diagrams/ELK-Docker-ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
