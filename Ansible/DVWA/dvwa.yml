@@ -1,0 +1,35 @@
+---
+- name: Push dvwa
+  hosts: webservers
+  become: true
+  tasks: 
+
+  - name: Install docker.io
+    apt:
+       name: docker.io
+       state: present
+       force_apt_get: yes
+       update_cache: yes
+
+  - name: Install pip3
+    apt:
+       name: python3-pip
+       state: present
+       force_apt_get: yes
+
+  - name: Install docker Python module
+    pip:
+       name: docker
+       state: present
+
+  - name: Install DVWA
+    docker_container:
+       name: dvwa
+       image: cyberxsecurity/dvwa
+       state: started
+       published_ports: 80:80
+
+  - name: enable docker services on startup
+    systemd:
+       name: docker
+       enabled: yes
