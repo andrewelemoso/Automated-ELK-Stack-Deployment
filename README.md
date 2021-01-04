@@ -94,6 +94,8 @@ SSH into the control node and follow the steps below:
  10.1.0.4 ansible_python_interpreter=/usr/bin/python3`
  
 - Run the playbook, and navigate to `http://[ELK-VM.Public.IP]:5601/app/kibana.`to check that the installation worked as expected.
-Successful Result should look just like these:
+
+**Successful Result should look just like these:**
 ![KIBANA](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Ansible/IMAGES/Kibana.png)
 ![Filebeat](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Ansible/IMAGES/Filebeat.png)
+![Filebeat Sample](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Ansible/IMAGES/Filebeat%20System%20Sample.png)
