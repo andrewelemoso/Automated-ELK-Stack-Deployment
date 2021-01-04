@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the [Automated-ELK-STACK-Deployment](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment) file may be used to install only certain pieces of it, such as Filebeat.
 
-[Filebeat Playbook](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Ansible/filebeat-playbook.yml)
+[Filebeat Playbook](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Ansible/Filebeat/filebeat-playbook.yml)
 
 This document contains the following details:
 - Description of the Topologu
@@ -59,7 +59,7 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because **of the ability to use YAML playbooks which is the best alternative for configuration management/automation, It is also able to automate complex multi-tier IT application environemtns.**
 
 The playbook implements the following tasks:
-[ELK Install Playbook](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Ansible/install-elk.yml)
+[ELK Install Playbook](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Ansible/ELK/install-elk.yml)
 - Download and Install Docker
 - Download and Install Python3-pip
 - Download and Install Docker
@@ -68,7 +68,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![docker ps](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Diagrams/ELK-Docker-ps.png)
+![docker ps](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Ansible/IMAGES/ELK-Docker-ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -88,7 +88,7 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the [Filebeat Playbook](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Ansible/filebeat-playbook.yml) file to `/etc/ansible`.
+- Copy the [Filebeat Configuration file](https://github.com/andrewelemoso/Automated-ELK-Stack-Deployment/blob/main/Ansible/Filebeat/Drew-filebeat-config.yml) file to `/etc/ansible`.
 - Update the `/etc/ansible/hosts` file to include 
 `[elk]
  10.1.0.4 ansible_python_interpreter=/usr/bin/python3`
